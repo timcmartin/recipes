@@ -1,0 +1,454 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Perfect Loaf Sourdough - Recipes</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Choice recipes.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item "><a href="../canning/index.html"><strong aria-hidden="true">2.</strong> Canning Calendar</a></li><li class="chapter-item "><a href="../equipment/index.html"><strong aria-hidden="true">3.</strong> Equipment</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../equipment/nespresso.html"><strong aria-hidden="true">3.1.</strong> Nespresso Descaling</a></li><li class="chapter-item "><a href="../equipment/smokey_mountain_cooker.html"><strong aria-hidden="true">3.2.</strong> Smoker</a></li></ol></li><li class="chapter-item "><a href="../appetizers/index.html"><strong aria-hidden="true">4.</strong> Appetizers</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../appetizers/blue_cheese_dip.html"><strong aria-hidden="true">4.1.</strong> Blue Cheese Dip</a></li><li class="chapter-item "><a href="../appetizers/chicken_satay.html"><strong aria-hidden="true">4.2.</strong> Chicken Satay</a></li><li class="chapter-item "><a href="../appetizers/corn_dip.html"><strong aria-hidden="true">4.3.</strong> Corn Dip</a></li><li class="chapter-item "><a href="../appetizers/cheese_spread.html"><strong aria-hidden="true">4.4.</strong> Latin Quarter Cheese Spread</a></li><li class="chapter-item "><a href="../appetizers/nacho_cheese.html"><strong aria-hidden="true">4.5.</strong> Nacho Cheese</a></li><li class="chapter-item "><a href="../appetizers/shrimp_cocktail.html"><strong aria-hidden="true">4.6.</strong> Shrimp Cocktail</a></li><li class="chapter-item "><a href="../appetizers/shrimp_skewers.html"><strong aria-hidden="true">4.7.</strong> Thai Shrimp Skewers</a></li></ol></li><li class="chapter-item "><a href="../beverages/index.html"><strong aria-hidden="true">5.</strong> Beverages</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../beverages/agave_simple_syrup.html"><strong aria-hidden="true">5.1.</strong> Agave Simple Syrup</a></li><li class="chapter-item "><a href="../beverages/smoothie.html"><strong aria-hidden="true">5.2.</strong> Breakfast Smoothie</a></li><li class="chapter-item "><a href="../beverages/cold_brew_coffee.html"><strong aria-hidden="true">5.3.</strong> Cold Brew Coffee</a></li><li class="chapter-item "><a href="../beverages/french_press.html"><strong aria-hidden="true">5.4.</strong> French Press Coffee</a></li><li class="chapter-item "><a href="../beverages/irish_cream.html"><strong aria-hidden="true">5.5.</strong> Irish Cream</a></li><li class="chapter-item "><a href="../beverages/paloma.html"><strong aria-hidden="true">5.6.</strong> Paloma</a></li><li class="chapter-item "><a href="../beverages/percolator_coffee.html"><strong aria-hidden="true">5.7.</strong> Percolator Coffee</a></li></ol></li><li class="chapter-item expanded "><a href="../bread/index.html"><strong aria-hidden="true">6.</strong> Bread</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../bread/bagels.html"><strong aria-hidden="true">6.1.</strong> Bagels</a></li><li class="chapter-item "><a href="../bread/corn_tortillas.html"><strong aria-hidden="true">6.2.</strong> Corn Tortillas</a></li><li class="chapter-item "><a href="../bread/daily_sourdough.html"><strong aria-hidden="true">6.3.</strong> Daily Sourdough</a></li><li class="chapter-item "><a href="../bread/easy_biscuits.html"><strong aria-hidden="true">6.4.</strong> Easy Biscuits</a></li><li class="chapter-item "><a href="../bread/english_muffins.html"><strong aria-hidden="true">6.5.</strong> English Muffins</a></li><li class="chapter-item "><a href="../bread/four_small_loaves.html"><strong aria-hidden="true">6.6.</strong> Four Small Loaves</a></li><li class="chapter-item "><a href="../bread/gravity_cheese_biscuits.html"><strong aria-hidden="true">6.7.</strong> Gravity Cheese Biscuits</a></li><li class="chapter-item "><a href="../bread/naan.html"><strong aria-hidden="true">6.8.</strong> Naan</a></li><li class="chapter-item "><a href="../bread/no_knead_bread.html"><strong aria-hidden="true">6.9.</strong> No-Knead Bread</a></li><li class="chapter-item "><a href="../bread/parker_house_rolls.html"><strong aria-hidden="true">6.10.</strong> Parker House Rolls</a></li><li class="chapter-item expanded "><a href="../bread/pl_sourdough.html" class="active"><strong aria-hidden="true">6.11.</strong> Perfect Loaf Sourdough</a></li><li class="chapter-item "><a href="../bread/sandwich_bread.html"><strong aria-hidden="true">6.12.</strong> Sandwich Bread</a></li><li class="chapter-item "><a href="../bread/sesame_buns.html"><strong aria-hidden="true">6.13.</strong> Sesame Buns</a></li><li class="chapter-item "><a href="../bread/sourdough_experiment.html"><strong aria-hidden="true">6.14.</strong> Sourdough Experiment</a></li><li class="chapter-item "><a href="../bread/tb_sourdough.html"><strong aria-hidden="true">6.15.</strong> Tartine Bread Sourdough</a></li><li class="chapter-item "><a href="../bread/weeknight_sourdough.html"><strong aria-hidden="true">6.16.</strong> Weeknight Sourdough</a></li></ol></li><li class="chapter-item "><a href="../condiments/index.html"><strong aria-hidden="true">7.</strong> Condiments, Spices & Sauces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../condiments/bbq_rub.html"><strong aria-hidden="true">7.1.</strong> BBQ Rub</a></li><li class="chapter-item "><a href="../condiments/blue_cheese_dressing.html"><strong aria-hidden="true">7.2.</strong> Blue Cheese Dressing</a></li><li class="chapter-item "><a href="../condiments/caesar_dressing.html"><strong aria-hidden="true">7.3.</strong> Caesar Dressing</a></li><li class="chapter-item "><a href="../condiments/carolina_gold_mustard_sauce.html"><strong aria-hidden="true">7.4.</strong> Carolina Gold Mustard Sauce</a></li><li class="chapter-item "><a href="../condiments/cheese_sauce.html"><strong aria-hidden="true">7.5.</strong> Cheese Sauce</a></li><li class="chapter-item "><a href="../condiments/chili_sauce.html"><strong aria-hidden="true">7.6.</strong> Chili Sauce</a></li><li class="chapter-item "><a href="../condiments/chimichurri.html"><strong aria-hidden="true">7.7.</strong> Chimichurri</a></li><li class="chapter-item "><a href="../condiments/cranberry_sauce.html"><strong aria-hidden="true">7.8.</strong> Cranberry Sauce</a></li><li class="chapter-item "><a href="../condiments/cream_cheese.html"><strong aria-hidden="true">7.9.</strong> Cream Cheese</a></li><li class="chapter-item "><a href="../condiments/crema.html"><strong aria-hidden="true">7.10.</strong> Crema</a></li><li class="chapter-item "><a href="../condiments/hollandaise.html"><strong aria-hidden="true">7.11.</strong> Hollandaise</a></li><li class="chapter-item "><a href="../condiments/horseradish_cream.html"><strong aria-hidden="true">7.12.</strong> Horseradish Cream</a></li><li class="chapter-item "><a href="../condiments/hot_sauce.html"><strong aria-hidden="true">7.13.</strong> Hot Sauce</a></li><li class="chapter-item "><a href="../condiments/kfc.html"><strong aria-hidden="true">7.14.</strong> KFC Spice</a></li><li class="chapter-item "><a href="../condiments/korean_bbq.html"><strong aria-hidden="true">7.15.</strong> Korean BBQ Sauce</a></li><li class="chapter-item "><a href="../condiments/mayonnaise.html"><strong aria-hidden="true">7.16.</strong> Mayonnaise</a></li><li class="chapter-item "><a href="../condiments/mop.html"><strong aria-hidden="true">7.17.</strong> Mop Sauce</a></li><li class="chapter-item "><a href="../condiments/mustard_sauce.html"><strong aria-hidden="true">7.18.</strong> Mustard Sauce</a></li><li class="chapter-item "><a href="../condiments/number_5_sauce.html"><strong aria-hidden="true">7.19.</strong> Number 5 Barbecue Sauce</a></li><li class="chapter-item "><a href="../condiments/olive_garden_dressing.html"><strong aria-hidden="true">7.20.</strong> Olive Garden Salad Dressing</a></li><li class="chapter-item "><a href="../condiments/pesto.html"><strong aria-hidden="true">7.21.</strong> Pesto</a></li><li class="chapter-item "><a href="../condiments/pizza_sauce.html"><strong aria-hidden="true">7.22.</strong> Pizza Sauce</a></li><li class="chapter-item "><a href="../condiments/rub.html"><strong aria-hidden="true">7.23.</strong> Rub</a></li><li class="chapter-item "><a href="../condiments/salsa_verde.html"><strong aria-hidden="true">7.24.</strong> Salsa Verde</a></li><li class="chapter-item "><a href="../condiments/taco_seasoning.html"><strong aria-hidden="true">7.25.</strong> Taco Seasoning</a></li><li class="chapter-item "><a href="../condiments/tartar_sauce.html"><strong aria-hidden="true">7.26.</strong> Tartar Sauce</a></li><li class="chapter-item "><a href="../condiments/tomato_sauce.html"><strong aria-hidden="true">7.27.</strong> Tomato Sauce</a></li><li class="chapter-item "><a href="../condiments/turkey_gravy.html"><strong aria-hidden="true">7.28.</strong> Turkey Gravy</a></li><li class="chapter-item "><a href="../condiments/tzatziki.html"><strong aria-hidden="true">7.29.</strong> Tzatziki</a></li></ol></li><li class="chapter-item "><a href="../desserts/index.html"><strong aria-hidden="true">8.</strong> Desserts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../desserts/apple_crumble.html"><strong aria-hidden="true">8.1.</strong> Apple Crumble</a></li><li class="chapter-item "><a href="../desserts/banana_bread.html"><strong aria-hidden="true">8.2.</strong> Banana Bread</a></li><li class="chapter-item "><a href="../desserts/blueberry_buckle.html"><strong aria-hidden="true">8.3.</strong> Blueberry Buckle</a></li><li class="chapter-item "><a href="../desserts/blueberry_mug_cake.html"><strong aria-hidden="true">8.4.</strong> Blueberry Mug Cake</a></li><li class="chapter-item "><a href="../desserts/buttertart_pie.html"><strong aria-hidden="true">8.5.</strong> Butter Tart Pie</a></li><li class="chapter-item "><a href="../desserts/caramel_apple_crisp.html"><strong aria-hidden="true">8.6.</strong> Caramel Apple Crisp</a></li><li class="chapter-item "><a href="../desserts/cheesecake.html"><strong aria-hidden="true">8.7.</strong> Cheesecake in a Jar</a></li><li class="chapter-item "><a href="../desserts/chocolate_pudding.html"><strong aria-hidden="true">8.8.</strong> Chocolate Pudding</a></li><li class="chapter-item "><a href="../desserts/chocolate_zucchini.html"><strong aria-hidden="true">8.9.</strong> Chocolate Zucchini Bread</a></li><li class="chapter-item "><a href="../desserts/deep_dish_apple_pie.html"><strong aria-hidden="true">8.10.</strong> Deep Dish Apple Pie</a></li><li class="chapter-item "><a href="../desserts/dutchies.html"><strong aria-hidden="true">8.11.</strong> Dutchie Donuts</a></li><li class="chapter-item "><a href="../desserts/gluten_free_apple_crisp.html"><strong aria-hidden="true">8.12.</strong> Gluten-Free Apple Crisp</a></li><li class="chapter-item "><a href="../desserts/gravity_carrot_cake.html"><strong aria-hidden="true">8.13.</strong> Gravity Carrot Cake</a></li><li class="chapter-item "><a href="../desserts/hard_chocolate_sauce.html"><strong aria-hidden="true">8.14.</strong> Hard Chocolate Sauce</a></li><li class="chapter-item "><a href="../desserts/millionaires_shortbread.html"><strong aria-hidden="true">8.15.</strong> Millionaire's Shortbread</a></li><li class="chapter-item "><a href="../desserts/mincemeat.html"><strong aria-hidden="true">8.16.</strong> Mincemeat</a></li><li class="chapter-item "><a href="../desserts/pie_dough.html"><strong aria-hidden="true">8.17.</strong> Pie Dough</a></li><li class="chapter-item "><a href="../desserts/pouding_chomeur.html"><strong aria-hidden="true">8.18.</strong> Pouding Chomeur</a></li><li class="chapter-item "><a href="../desserts/pumpkin_bread.html"><strong aria-hidden="true">8.19.</strong> Pumpkin Bread</a></li><li class="chapter-item "><a href="../desserts/pumpkin_pie.html"><strong aria-hidden="true">8.20.</strong> Pumpkin Pie</a></li><li class="chapter-item "><a href="../desserts/salted_caramel_bars.html"><strong aria-hidden="true">8.21.</strong> Salted Caramel Chocolate Stack Bars</a></li><li class="chapter-item "><a href="../desserts/salted_peanut_caramel_tart.html"><strong aria-hidden="true">8.22.</strong> Salted Peanut And Caramel Tart</a></li><li class="chapter-item "><a href="../desserts/shortbread_cutout.html"><strong aria-hidden="true">8.23.</strong> Shortbread Cutout Cookies</a></li><li class="chapter-item "><a href="../desserts/strawberry_peach_cobbler.html"><strong aria-hidden="true">8.24.</strong> Strawberry Peach Cobbler</a></li><li class="chapter-item "><a href="../desserts/strawberry_rhubarb.html"><strong aria-hidden="true">8.25.</strong> Strawberry Rhubarb Crisp</a></li></ol></li><li class="chapter-item "><a href="../mains/index.html"><strong aria-hidden="true">9.</strong> Mains</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../mains/air_fryer_wings.html"><strong aria-hidden="true">9.1.</strong> Air Fryer Wings</a></li><li class="chapter-item "><a href="../mains/argentinian_style_steak.html"><strong aria-hidden="true">9.2.</strong> Argentinian Style Steak</a></li><li class="chapter-item "><a href="../mains/baked_ziti.html"><strong aria-hidden="true">9.3.</strong> Baked Ziti</a></li><li class="chapter-item "><a href="../mains/beef_and_bean_chili.html"><strong aria-hidden="true">9.4.</strong> Beef And Bean Chili</a></li><li class="chapter-item "><a href="../mains/beef_stew.html"><strong aria-hidden="true">9.5.</strong> Beef Stew</a></li><li class="chapter-item "><a href="../mains/beef_stirfry.html"><strong aria-hidden="true">9.6.</strong> Beef Stir Fry</a></li><li class="chapter-item "><a href="../mains/weeknight_bolognese.html"><strong aria-hidden="true">9.7.</strong> Bolognese</a></li><li class="chapter-item "><a href="../mains/breakfast.html"><strong aria-hidden="true">9.8.</strong> Breakfast</a></li><li class="chapter-item "><a href="../mains/brisket.html"><strong aria-hidden="true">9.9.</strong> Brisket</a></li><li class="chapter-item "><a href="../mains/cabbage_rolls.html"><strong aria-hidden="true">9.10.</strong> Cabbage Rolls</a></li><li class="chapter-item "><a href="../mains/cassoulet.html"><strong aria-hidden="true">9.11.</strong> Cassoulet</a></li><li class="chapter-item "><a href="../mains/chicken_and_sliders.html"><strong aria-hidden="true">9.12.</strong> Chicken And Sliders</a></li><li class="chapter-item "><a href="../mains/chicken_pot_pie.html"><strong aria-hidden="true">9.13.</strong> Chicken Pot Pie</a></li><li class="chapter-item "><a href="../mains/chicken_souvlaki.html"><strong aria-hidden="true">9.14.</strong> Chicken Souvlaki</a></li><li class="chapter-item "><a href="../mains/chicken_vindaloo.html"><strong aria-hidden="true">9.15.</strong> Chicken Vindaloo</a></li><li class="chapter-item "><a href="../mains/coconut_curry_shrimp.html"><strong aria-hidden="true">9.16.</strong> Coconut Curry Shrimp</a></li><li class="chapter-item "><a href="../mains/deconstructed_turkey.html"><strong aria-hidden="true">9.17.</strong> Deconstructed Turkey</a></li><li class="chapter-item "><a href="../mains/detroit_pizza.html"><strong aria-hidden="true">9.18.</strong> Detroit Pizza</a></li><li class="chapter-item "><a href="../mains/deviled_pork_chops.html"><strong aria-hidden="true">9.19.</strong> Deviled Pork Chops</a></li><li class="chapter-item "><a href="../mains/donairs.html"><strong aria-hidden="true">9.20.</strong> Donairs</a></li><li class="chapter-item "><a href="../mains/alfredo.html"><strong aria-hidden="true">9.21.</strong> Fettuccine Alfredo</a></li><li class="chapter-item "><a href="../mains/grain_bowls.html"><strong aria-hidden="true">9.22.</strong> Grain Bowls</a></li><li class="chapter-item "><a href="../mains/ground_beef_chili.html"><strong aria-hidden="true">9.23.</strong> Ground Beef Chili</a></li><li class="chapter-item "><a href="../mains/panzanella_salad.html"><strong aria-hidden="true">9.24.</strong> Grilled Chicken Panzanella Salad</a></li><li class="chapter-item "><a href="../mains/grilled_pizza.html"><strong aria-hidden="true">9.25.</strong> Grilled Pizza</a></li><li class="chapter-item "><a href="../mains/halloumi_caesar_salad.html"><strong aria-hidden="true">9.26.</strong> Halloumi Caesar Salad</a></li><li class="chapter-item "><a href="../mains/ham_with_pineapple.html"><strong aria-hidden="true">9.27.</strong> Ham with Pineapple</a></li><li class="chapter-item "><a href="../mains/hoisin_pork_lettuce_wraps.html"><strong aria-hidden="true">9.28.</strong> Hoisin Pork Lettuce Wraps</a></li><li class="chapter-item "><a href="../mains/huevos_rancheros.html"><strong aria-hidden="true">9.29.</strong> Huevos Rancheros</a></li><li class="chapter-item "><a href="../mains/jerk_chicken.html"><strong aria-hidden="true">9.30.</strong> Jerk Chicken</a></li><li class="chapter-item "><a href="../mains/korean_wings.html"><strong aria-hidden="true">9.31.</strong> Korean Fried Chicken Wings</a></li><li class="chapter-item "><a href="../mains/kung_pao_chicken.html"><strong aria-hidden="true">9.32.</strong> Kung Pao Chicken</a></li><li class="chapter-item "><a href="../mains/atk_meatballs.html"><strong aria-hidden="true">9.33.</strong> Meatballs (ATK)</a></li><li class="chapter-item "><a href="../mains/meatballs.html"><strong aria-hidden="true">9.34.</strong> Meatballs</a></li><li class="chapter-item "><a href="../mains/meatloaf.html"><strong aria-hidden="true">9.35.</strong> Meatloaf</a></li><li class="chapter-item "><a href="../mains/mushroom_lasagna.html"><strong aria-hidden="true">9.36.</strong> Mushroom Lasagna</a></li><li class="chapter-item "><a href="../mains/ny_street_cart_chicken.html"><strong aria-hidden="true">9.37.</strong> NY Street Cart Chicken</a></li><li class="chapter-item "><a href="../mains/one_batch_fried_chicken.html"><strong aria-hidden="true">9.38.</strong> One Batch Fried Chicken</a></li><li class="chapter-item "><a href="../mains/oven_ribs.html"><strong aria-hidden="true">9.39.</strong> Oven Ribs</a></li><li class="chapter-item "><a href="../mains/pad_thai.html"><strong aria-hidden="true">9.40.</strong> Pad Thai</a></li><li class="chapter-item "><a href="../mains/pancakes.html"><strong aria-hidden="true">9.41.</strong> Pancakes</a></li><li class="chapter-item "><a href="../mains/pasta_with_cauliflower.html"><strong aria-hidden="true">9.42.</strong> Pasta With Cauliflower</a></li><li class="chapter-item "><a href="../mains/perfect_ramen.html"><strong aria-hidden="true">9.43.</strong> Perfect Ramen</a></li><li class="chapter-item "><a href="../mains/pesto.html"><strong aria-hidden="true">9.44.</strong> Pesto</a></li><li class="chapter-item "><a href="../mains/pizza_dough.html"><strong aria-hidden="true">9.45.</strong> Pizza Dough</a></li><li class="chapter-item "><a href="../mains/pizza_papalis.html"><strong aria-hidden="true">9.46.</strong> Pizza Papalis</a></li><li class="chapter-item "><a href="../mains/pork_belly_burnt_ends.html"><strong aria-hidden="true">9.47.</strong> Pork Belly Burnt Ends</a></li><li class="chapter-item "><a href="../mains/pork_carnitas.html"><strong aria-hidden="true">9.48.</strong> Pork Carnitas</a></li><li class="chapter-item "><a href="../mains/pressure_cooker_beef_stew.html"><strong aria-hidden="true">9.49.</strong> Pressure Cooker Beef Stew</a></li><li class="chapter-item "><a href="../mains/prime_rib.html"><strong aria-hidden="true">9.50.</strong> Prime Rib</a></li><li class="chapter-item "><a href="../mains/shaking_beef.html"><strong aria-hidden="true">9.51.</strong> Shaking Beef</a></li><li class="chapter-item "><a href="../mains/shepherds_pie.html"><strong aria-hidden="true">9.52.</strong> Shepherd's Pie</a></li><li class="chapter-item "><a href="../mains/shrimp_boil.html"><strong aria-hidden="true">9.53.</strong> Shrimp Boil</a></li><li class="chapter-item "><a href="../mains/shrimp_burgers.html"><strong aria-hidden="true">9.54.</strong> Shrimp Burgers</a></li><li class="chapter-item "><a href="../mains/smoke_roasted_ham.html"><strong aria-hidden="true">9.55.</strong> Smoke Roasted Ham</a></li><li class="chapter-item "><a href="../mains/smothered_chicken.html"><strong aria-hidden="true">9.56.</strong> Smothered Chicken</a></li><li class="chapter-item "><a href="../mains/spaghetti_squash.html"><strong aria-hidden="true">9.57.</strong> Spaghetti Squash</a></li><li class="chapter-item "><a href="../mains/macaroni_and_cheese.html"><strong aria-hidden="true">9.58.</strong> Stovetop Macaroni and Cheese</a></li><li class="chapter-item "><a href="../mains/strip_loin_roast.html"><strong aria-hidden="true">9.59.</strong> Strip Loin Roast</a></li><li class="chapter-item "><a href="../mains/stuffed_shells.html"><strong aria-hidden="true">9.60.</strong> Stuffed Shells</a></li><li class="chapter-item "><a href="../mains/tacos_al_carbon.html"><strong aria-hidden="true">9.61.</strong> Tacos al Carbon</a></li><li class="chapter-item "><a href="../mains/top_loin_roast.html"><strong aria-hidden="true">9.62.</strong> Top Loin Roast</a></li><li class="chapter-item "><a href="../mains/thick_cut_pork.html"><strong aria-hidden="true">9.63.</strong> Thick Cut Pork Chops</a></li><li class="chapter-item "><a href="../mains/tuna_casserole.html"><strong aria-hidden="true">9.64.</strong> Tuna Casserole</a></li><li class="chapter-item "><a href="../mains/tuna_lasagna.html"><strong aria-hidden="true">9.65.</strong> Tuna Lasagna</a></li><li class="chapter-item "><a href="../mains/tuscan_steak.html"><strong aria-hidden="true">9.66.</strong> Tuscan Steak Salad</a></li><li class="chapter-item "><a href="../mains/waffles.html"><strong aria-hidden="true">9.67.</strong> Waffles</a></li><li class="chapter-item "><a href="../mains/welsh_rarebit.html"><strong aria-hidden="true">9.68.</strong> Welsh Rarebit</a></li></ol></li><li class="chapter-item "><a href="../mealPlanning/index.html"><strong aria-hidden="true">10.</strong> Meal Planning</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../mealPlanning/thanksgiving_2019.html"><strong aria-hidden="true">10.1.</strong> Thanksgiving 2019</a></li><li class="chapter-item "><a href="../mealPlanning/christmas_2019.html"><strong aria-hidden="true">10.2.</strong> Christmas 2019</a></li><li class="chapter-item "><a href="../mealPlanning/christmas_2023.html"><strong aria-hidden="true">10.3.</strong> Christmas 2023</a></li><li class="chapter-item "><a href="../mealPlanning/thanksgiving_2024.html"><strong aria-hidden="true">10.4.</strong> Thanksgiving 2024</a></li><li class="chapter-item "><a href="../mealPlanning/easter_2025.html"><strong aria-hidden="true">10.5.</strong> Easter 2025</a></li></ol></li><li class="chapter-item "><a href="../misc/index.html"><strong aria-hidden="true">11.</strong> Miscellaneous</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../misc/dog_food.html"><strong aria-hidden="true">11.1.</strong> Dog Food</a></li><li class="chapter-item "><a href="../misc/pill_pockets.html"><strong aria-hidden="true">11.2.</strong> Pill Pockets</a></li><li class="chapter-item "><a href="../misc/squirrel.html"><strong aria-hidden="true">11.3.</strong> Squirrel Repellant - Dry</a></li><li class="chapter-item "><a href="../misc/pepper_spray.html"><strong aria-hidden="true">11.4.</strong> Squirrel Repellant - Wet</a></li><li class="chapter-item "><a href="../misc/turkey_brine.html"><strong aria-hidden="true">11.5.</strong> Turkey Brine</a></li></ol></li><li class="chapter-item "><a href="../preserving/index.html"><strong aria-hidden="true">12.</strong> Preserving</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../preserving/bacon.html"><strong aria-hidden="true">12.1.</strong> Bacon</a></li><li class="chapter-item "><a href="../preserving/dill_pickles.html"><strong aria-hidden="true">12.2.</strong> Dill Pickles</a></li><li class="chapter-item "><a href="../preserving/fermented_dill_pickles.html"><strong aria-hidden="true">12.3.</strong> Fermented Dill Pickles</a></li><li class="chapter-item "><a href="../preserving/horseradish.html"><strong aria-hidden="true">12.4.</strong> Horesradish</a></li><li class="chapter-item "><a href="../preserving/maraschino.html"><strong aria-hidden="true">12.5.</strong> Maraschino Cherries</a></li><li class="chapter-item "><a href="../preserving/pickled_cauliflower.html"><strong aria-hidden="true">12.6.</strong> Pickled Cauliflower</a></li><li class="chapter-item "><a href="../preserving/pickled_peppers.html"><strong aria-hidden="true">12.7.</strong> Pickled Peppers</a></li><li class="chapter-item "><a href="../preserving/quick_pickles.html"><strong aria-hidden="true">12.8.</strong> Quick Pickles</a></li><li class="chapter-item "><a href="../preserving/saskatoon_jam.html"><strong aria-hidden="true">12.9.</strong> Saskatoon Jam</a></li><li class="chapter-item "><a href="../preserving/strawberry_jam.html"><strong aria-hidden="true">12.10.</strong> Strawberry Jam</a></li><li class="chapter-item "><a href="../preserving/tasso_ham.html"><strong aria-hidden="true">12.11.</strong> Tasso Ham</a></li><li class="chapter-item "><a href="../preserving/tomato_chow.html"><strong aria-hidden="true">12.12.</strong> Tomato Chow</a></li><li class="chapter-item "><a href="../preserving/tomato_sauce.html"><strong aria-hidden="true">12.13.</strong> Tomato Sauce</a></li></ol></li><li class="chapter-item "><a href="../sides/index.html"><strong aria-hidden="true">13.</strong> Sides</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../sides/baked_beans.html"><strong aria-hidden="true">13.1.</strong> Baked Beans</a></li><li class="chapter-item "><a href="../sides/baked_potatoes.html"><strong aria-hidden="true">13.2.</strong> Baked Potatoes</a></li><li class="chapter-item "><a href="../sides/brussels_sprouts.html"><strong aria-hidden="true">13.3.</strong> Brussels Sprouts</a></li><li class="chapter-item "><a href="../sides/buns.html"><strong aria-hidden="true">13.4.</strong> Buns</a></li><li class="chapter-item "><a href="../sides/chinese_restaurant_rice.html"><strong aria-hidden="true">13.5.</strong> Chinese Restaurant Style Rice</a></li><li class="chapter-item "><a href="../sides/chipotle_potatoes.html"><strong aria-hidden="true">13.6.</strong> Chipotle Smashed Sweet Potatoes</a></li><li class="chapter-item "><a href="../sides/ci_kale.html"><strong aria-hidden="true">13.7.</strong> CI Kale Caesar</a></li><li class="chapter-item "><a href="../sides/coconut_rice.html"><strong aria-hidden="true">13.8.</strong> Coconut Rice</a></li><li class="chapter-item "><a href="../sides/coleslaw.html"><strong aria-hidden="true">13.9.</strong> Coleslaw</a></li><li class="chapter-item "><a href="../sides/corn_bread.html"><strong aria-hidden="true">13.10.</strong> Corn Bread</a></li><li class="chapter-item "><a href="../sides/creamed_corn.html"><strong aria-hidden="true">13.11.</strong> Creamed Corn</a></li><li class="chapter-item "><a href="../sides/potato_casserole.html"><strong aria-hidden="true">13.12.</strong> Crock Pot Potato Casserole</a></li><li class="chapter-item "><a href="../sides/dauphinoise_potatoes.html"><strong aria-hidden="true">13.13.</strong> Dauphinoise Potatoes</a></li><li class="chapter-item "><a href="../sides/fluffy_rice.html"><strong aria-hidden="true">13.14.</strong> Fluffy Rice</a></li><li class="chapter-item "><a href="../sides/fondant_potatoes.html"><strong aria-hidden="true">13.15.</strong> Fondant Potatoes</a></li><li class="chapter-item "><a href="../sides/french_fries.html"><strong aria-hidden="true">13.16.</strong> French Fries</a></li><li class="chapter-item "><a href="../sides/frijoles_charros.html"><strong aria-hidden="true">13.17.</strong> Frijoles Charros</a></li><li class="chapter-item "><a href="../sides/garlic_bread.html"><strong aria-hidden="true">13.18.</strong> Garlic Bread</a></li><li class="chapter-item "><a href="../sides/glazed_carrots.html"><strong aria-hidden="true">13.19.</strong> Glazed Carrots</a></li><li class="chapter-item "><a href="../sides/golden_rice.html"><strong aria-hidden="true">13.20.</strong> Golden Rice</a></li><li class="chapter-item "><a href="../sides/green_beans.html"><strong aria-hidden="true">13.21.</strong> Green Beans</a></li><li class="chapter-item "><a href="../sides/hamburger_buns.html"><strong aria-hidden="true">13.22.</strong> Hamburger Buns</a></li><li class="chapter-item "><a href="../sides/home_fries.html"><strong aria-hidden="true">13.23.</strong> Home Fries</a></li><li class="chapter-item "><a href="../sides/jalapeno_cheddar_corn_bread.html"><strong aria-hidden="true">13.24.</strong> Jalapeno Cheddar Corn Bread</a></li><li class="chapter-item "><a href="../sides/mexican_rice.html"><strong aria-hidden="true">13.25.</strong> Mexican Rice</a></li><li class="chapter-item "><a href="../sides/moms_green_salad.html"><strong aria-hidden="true">13.26.</strong> Mom's Green Salad</a></li><li class="chapter-item "><a href="../sides/orange_jello_salad.html"><strong aria-hidden="true">13.27.</strong> Orange Jello Salad</a></li><li class="chapter-item "><a href="../sides/potato_salad.html"><strong aria-hidden="true">13.28.</strong> Potato Salad</a></li><li class="chapter-item "><a href="../sides/scalloped_potatoes.html"><strong aria-hidden="true">13.29.</strong> Scalloped Potatoes</a></li><li class="chapter-item "><a href="../sides/steakhouse_salad.html"><strong aria-hidden="true">13.30.</strong> Steakhouse Salad</a></li><li class="chapter-item "><a href="../sides/stuffing.html"><strong aria-hidden="true">13.31.</strong> Stuffing / Dressing</a></li><li class="chapter-item "><a href="../sides/tortillas.html"><strong aria-hidden="true">13.32.</strong> Tortillas</a></li><li class="chapter-item "><a href="../sides/una_caesar.html"><strong aria-hidden="true">13.33.</strong> Una Kale Caesar</a></li><li class="chapter-item "><a href="../sides/vegetable_medley.html"><strong aria-hidden="true">13.34.</strong> Vegetable Medley</a></li><li class="chapter-item "><a href="../sides/whole_roasted_cauliflower.html"><strong aria-hidden="true">13.35.</strong> Whole Roasted Cauliflower</a></li><li class="chapter-item "><a href="../sides/yorkshire_pudding.html"><strong aria-hidden="true">13.36.</strong> Yorkshire Pudding</a></li></ol></li><li class="chapter-item "><a href="../snacks/index.html"><strong aria-hidden="true">14.</strong> Snacks</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../snacks/beef_jerky.html"><strong aria-hidden="true">14.1.</strong> Beef Jerky</a></li><li class="chapter-item "><a href="../snacks/cocktail_crisps.html"><strong aria-hidden="true">14.2.</strong> Cocktail Crisps</a></li><li class="chapter-item "><a href="../snacks/egg_bites.html"><strong aria-hidden="true">14.3.</strong> Egg Bites</a></li><li class="chapter-item "><a href="../snacks/hot_donair_dip.html"><strong aria-hidden="true">14.4.</strong> Hot Donair Dip</a></li><li class="chapter-item "><a href="../snacks/hummus.html"><strong aria-hidden="true">14.5.</strong> Hummus</a></li><li class="chapter-item "><a href="../snacks/nuts_bolts.html"><strong aria-hidden="true">14.6.</strong> Nuts & Bolts</a></li><li class="chapter-item "><a href="../snacks/pb_energy.html"><strong aria-hidden="true">14.7.</strong> Peanut Butter Engergy Bites</a></li><li class="chapter-item "><a href="../snacks/perfect_popcorn.html"><strong aria-hidden="true">14.8.</strong> Perfect Popcorn</a></li><li class="chapter-item "><a href="../snacks/popcorn_maker.html"><strong aria-hidden="true">14.9.</strong> Popcorn Maker</a></li></ol></li><li class="chapter-item "><a href="../soups/index.html"><strong aria-hidden="true">15.</strong> Soups</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../soups/avgolemono.html"><strong aria-hidden="true">15.1.</strong> Avgolemono</a></li><li class="chapter-item "><a href="../soups/butternut_squash.html"><strong aria-hidden="true">15.2.</strong> Butternut Squash, Sweet Potato, Lentil</a></li><li class="chapter-item "><a href="../soups/cauliflower.html"><strong aria-hidden="true">15.3.</strong> Cauliflower Soup</a></li><li class="chapter-item "><a href="../soups/chicken_stock.html"><strong aria-hidden="true">15.4.</strong> Breville Fast Slow Cooker Chicken Stock</a></li><li class="chapter-item "><a href="../soups/farmhouse_chicken_noodle_soup.html"><strong aria-hidden="true">15.5.</strong> Farmhouse Chicken Noodle Soup</a></li><li class="chapter-item "><a href="../soups/french_onion_soup.html"><strong aria-hidden="true">15.6.</strong> French Onion Soup</a></li><li class="chapter-item "><a href="../soups/minestrone_soup.html"><strong aria-hidden="true">15.7.</strong> Minestrone Soup</a></li><li class="chapter-item "><a href="../soups/mushroom.html"><strong aria-hidden="true">15.8.</strong> Mushroom Soup</a></li><li class="chapter-item "><a href="../soups/vegetable_soup.html"><strong aria-hidden="true">15.9.</strong> Vegetable Soup</a></li></ol></li><li class="chapter-item "><a href="../trial/index.html"><strong aria-hidden="true">16.</strong> To Try</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../trial/bb_pickles.html"><strong aria-hidden="true">16.1.</strong> Bread and Butter Pickles</a></li><li class="chapter-item "><a href="../trial/buttermilk.html"><strong aria-hidden="true">16.2.</strong> Buttermilk Substitute</a></li><li class="chapter-item "><a href="../trial/chili_crisp.html"><strong aria-hidden="true">16.3.</strong> Chili Crisp</a></li><li class="chapter-item "><a href="../trial/dandan.html"><strong aria-hidden="true">16.4.</strong> Dan Dan Noodles</a></li><li class="chapter-item "><a href="../trial/flour_tortillas.html"><strong aria-hidden="true">16.5.</strong> Flour Tortillas</a></li><li class="chapter-item "><a href="../trial/grill_fried_chicken_wings.html"><strong aria-hidden="true">16.6.</strong> Grill Fried Chicken Wings</a></li><li class="chapter-item "><a href="../trial/grown_up_grilled_cheese.html"><strong aria-hidden="true">16.7.</strong> Grown Up Grilled Cheese</a></li><li class="chapter-item "><a href="../trial/hellmans.html"><strong aria-hidden="true">16.8.</strong> Hellman's Mayo Clone</a></li><li class="chapter-item "><a href="../trial/helluva_good_dip.html"><strong aria-hidden="true">16.9.</strong> Helluva Good Dip</a></li><li class="chapter-item "><a href="../trial/raisin_cinnamon.html"><strong aria-hidden="true">16.10.</strong> No Knead Raisin Cinnamon Bread</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Recipes</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="sourdough-bread"><a class="header" href="#sourdough-bread">Sourdough Bread</a></h1>
+<p><a href="https://www.theperfectloaf.com/beginners-sourdough-bread/">Perfect Loaf</a></p>
+<h2 id="final-dough-temperature"><a class="header" href="#final-dough-temperature">Final Dough Temperature</a></h2>
+<ul>
+<li>Final Dough Temperature: 78 degrees</li>
+<li>WaterTemp = (FDT x 4) - (LevainTemp + FlourTemp + AmbientTemp)</li>
+<li>ex:
+<ul>
+<li>WaterTemp = (78 x 4) - (75 + 70 + 75)</li>
+<li>WaterTemp = 92°F</li>
+</ul>
+</li>
+</ul>
+<h2 id="levain-build"><a class="header" href="#levain-build">Levain Build</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Weight</th><th>Ingedient</th><th>Percentage</th></tr></thead><tbody>
+<tr><td>37 g</td><td>Starter</td><td>50 %</td></tr>
+<tr><td>37 g</td><td>Whole Wheat Flour</td><td>50 %</td></tr>
+<tr><td>37 g</td><td>AP Flour</td><td>50 %</td></tr>
+<tr><td>74 g</td><td>Water</td><td>100 %</td></tr>
+</tbody></table>
+</div>
+<h2 id="dough-mix"><a class="header" href="#dough-mix">Dough Mix</a></h2>
+<h3 id="1-loaf"><a class="header" href="#1-loaf">1 Loaf</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Weight</th><th>Ingredient</th></tr></thead><tbody>
+<tr><td>374 g</td><td>Bread Flour</td></tr>
+<tr><td>79.5 g</td><td>Whole Wheat Flour</td></tr>
+<tr><td>345.5 g</td><td>Water</td></tr>
+<tr><td>9 g</td><td>Fine Salt</td></tr>
+<tr><td>92 g</td><td>Levain</td></tr>
+</tbody></table>
+</div>
+<h3 id="2-loaves"><a class="header" href="#2-loaves">2 Loaves</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Weight</th><th>Ingredient</th></tr></thead><tbody>
+<tr><td>748 g</td><td>Bread Flour</td></tr>
+<tr><td>159 g</td><td>Whole Wheat Flour</td></tr>
+<tr><td>691 g</td><td>Water</td></tr>
+<tr><td>18 g</td><td>Fine Salt</td></tr>
+<tr><td>184 g</td><td>Levain</td></tr>
+</tbody></table>
+</div>
+<h2 id="method"><a class="header" href="#method">Method</a></h2>
+<h3 id="levain---800-am"><a class="header" href="#levain---800-am">Levain - 8:00 a.m.</a></h3>
+<ul>
+<li>Mix together everything called for in the “Levain Build” section above in a clean jar in the morning and store somewhere around 74-76°F (23-24°C) ambient for 5-6 hours. Keep an eye on how your levain is progressing during this time. When it’s ready to be used it will be expanded, bubbly on top &amp; at the sides, and smell almost a little sour. The photo above is the state of my levain just before going into my dough mix at 1:00 p.m. below.</li>
+</ul>
+<h3 id="autolyse--1200-pm"><a class="header" href="#autolyse--1200-pm">Autolyse – 12:00 p.m.</a></h3>
+<ul>
+<li>NB. For 1 loaf, use 320 g of water, 2 loaves 641 g.</li>
+<li>Using your hands, mix all the flour and most of the water (reserve 50g water for later) called for in the “Dough Mix” section above in a bowl until all dry bits are hydrated. Cover the bowl and store somewhere warm (near your levain is convenient) for 1 hour. Note that this autolyse stage does not incorporate or use salt or the levain build in any way, they are two separate entities at this point that will be mixed together later in the process.</li>
+</ul>
+<h3 id="mix--100-pm"><a class="header" href="#mix--100-pm">Mix – 1:00 p.m.</a></h3>
+<ul>
+<li>At this point your autolyse is complete and your levain is ready. Add salt, reserved water, and levain to your already mixed flour &amp; water and mix thoroughly. I like to spread everything on top of dough resting in the bowl and use my hand to pinch all the ingredients together. Transfer dough to a tub or thick-walled bowl for bulk fermentation.</li>
+<li>At this point use your instant-read thermometer to take the temperature of your dough to get your final dough temperature. If your FDT is below 78°F (25°C) next time use warmer water, and conversely, if it’s above 78°F (25°C) use cooler water.</li>
+</ul>
+<h3 id="bulk-fermentation--110-pm-to-510-pm"><a class="header" href="#bulk-fermentation--110-pm-to-510-pm">Bulk Fermentation – 1:10 p.m. to 5:10 p.m.</a></h3>
+<ul>
+<li>At 76-80°F (24-26°C) ambient temperature bulk fermentation should go for about 4 hours. Perform 3 sets of stretch and folds during bulk fermentation, spaced out by 30 minutes.</li>
+<li>Each set consists of 4 folds, one at the North, South, East and West sides. Wet your hands with a little water to prevent sticking and then lift up one side (North) of the dough with two hands. Stretch the dough up high enough just so that you can fold it completely over to the other side of the dough in the bowl. Rotate the bowl 180° and do the other side (South). Finish the other two sides (East and West) to complete the set. Let the dough rest 30 minutes, covered, between sets.</li>
+<li>After that third set of stretch and folds, let the dough rest the remainder of bulk fermentation. During this time we let the flour ferment further, aerating it (making it rise), strengthening it and developing flavor.</li>
+</ul>
+<h3 id="divide--preshape--515-pm"><a class="header" href="#divide--preshape--515-pm">(Divide &amp;) Preshape – 5:15 p.m.</a></h3>
+<ul>
+<li>Lightly flour your work surface and dump out the dough. With your bench knife in one hand divide the dough into two halves. Lightly flour your other hand and using both the knife and your hand turn each half of dough on the counter while lightly pulling the dough towards you. This gentle turning and pulling motion will develop tension on the top of the dough forming a round circle.</li>
+<li>Let the dough rest for 25 minutes, uncovered.</li>
+</ul>
+<h3 id="shape--535-pm"><a class="header" href="#shape--535-pm">Shape – 5:35 p.m.</a></h3>
+<ul>
+<li>If you’re new to shaping bread dough, have a look at my Guide to Shaping a Boule (a round) in addition to the steps below. Or, if you’d like to shape this dough as a batard (an oval) instead of a boule, check out my batard shaping guide.</li>
+<li>Lightly flour the top of your dough rounds and the work surface. Working with one at a time, flip the round so the floured top is now down on the floured work surface.</li>
+<li>As seen in the image below, lightly flour your hands and grab the bottom of the round and stretch it lightly downward towards your body and then up and over about 2/3 the way to the top.</li>
+<li>Then, grab the left and right sides of the dough and stretch them away from each other, fold one side over toward the other and repeat with the other side.</li>
+<li>Then, grab the top of the circle and stretch away from your body and fold down to the bottom of the resting dough. You’ll now have a tight package that resembles a letter.</li>
+<li>Finally, flip, or roll down the dough so the seams are all on the bottom and using two hands cup the top part of the round and drag the dough gently towards your body. The angle of your hands will gently press the bottom of the dough on the counter creating tension, forming a skin on the top of the dough as you drag.</li>
+<li>After shaping, let the dough rest on the bench for a few minutes and then place seam-side-up into a towel-lined kitchen bowl that was lightly dusted with white rice flour.</li>
+</ul>
+<h3 id="rest--proof--540-pm-to-930-am-next-day"><a class="header" href="#rest--proof--540-pm-to-930-am-next-day">Rest &amp; Proof – 5:40 p.m. to 9:30 a.m. (next day)</a></h3>
+<ul>
+<li>To prevent your dough from drying out overnight, place your bowls containing your shaped dough in plastic bags sealed shut with a rubber band. I will usually puff up the plastic bag around the bowl by opening it wide and then quickly closing the opening.</li>
+<li>Once covered, let the dough rest on the counter for 20 minutes. Then, retard in the refrigerator at 38°F (3°C) for 16 hours.</li>
+<li>During this time overall fermentation will slow, but (good) bacteria activity will continue, contributing to a more complex flavor and deeper crust coloring.</li>
+</ul>
+<h3 id="bake--next-morning-preheat-oven-at-830-am-bake-at-930-am"><a class="header" href="#bake--next-morning-preheat-oven-at-830-am-bake-at-930-am">Bake – Next Morning: Preheat oven at 8:30 a.m., Bake at 9:30 a.m.</a></h3>
+<ul>
+<li>Preheat your combo cooker or Dutch oven inside your oven for 1 hour at 500°F (260°C). If you’re using a combo cooker, place the shallow side face up on one side and the heavier, deep side, face down on the other.</li>
+<li>When you’re done preheating, take one of your plastic bag-wrapped loaves out of the fridge and unwrap it. Cut a piece of parchment paper so it fits over the top of your basket and place on a pizza peel. Invert the peel and parchment paper so they are resting on top of your basket containing your dough. Then flip the whole thing over. Remove the basket and your dough should be resting on the parchment.</li>
+<li>Score these loaves at a 90° angle between the razor blade and dough. If you want a more pronounced “ear” at each score line, lower the angle between the blade and the dough (so the blade is close to horizontal with the dough). I chose to do a “box” pattern. If using scissors, snip the dough a few times at a very shallow angle between the scissors and the dough, forming a set of ridges down the center of the dough.</li>
+<li>While wearing your oven mitt, and with caution, pull out your shallow side of the combo cooker. Using your pizza peel, drag a corner of the parchment paper to slide your dough into the combo cooker. Place it back into the oven and cover the shallow side with the deep side to create a seal. This sealed environment helps trap the escaping steam from your dough to steam the exterior of the loaf as it bakes, encouraging maximal rise.</li>
+<li>Turn the oven down to 475°F (246°C) and bake for 20 minutes. After 20 minutes, use your oven mitt to very carefully remove the top of the combo cooker. Leave the large side of the combo cooker in the oven to the side of the shallow part of the cooker holding your dough. Close the door, turn the oven down to 450°F (232°C), and bake for 30 more minutes. If you are unsure if your bread is done, use your thermometer to test the internal temperature, it should register over 208°F (97°C).</li>
+<li>When done, carefully use your oven mitt to remove the bread from the combo cooker (I will grab a corner of the parchment paper and drag the cooked bread out of the cooker) and cool on a wire rack. Place the combo cooker back in the oven and bring the temperature back up to 500°F (260°C). Repeat for the second loaf.</li>
+<li>Wait 1-2 hours before slicing the bread (I know, it’s hard to do this) to ensure the interior is set.</li>
+<li>If you’re running into problems with baking in a Dutch oven, and have burned the bottom of your loaves, check out my guide on how to bake bread in a dutch oven for some fixes.</li>
+</ul>
+<h2 id="another-loaf"><a class="header" href="#another-loaf">Another Loaf</a></h2>
+<p>https://www.theperfectloaf.com/best-sourdough-recipe/</p>
+<h3 id="levain"><a class="header" href="#levain">Levain</a></h3>
+<ul>
+<li>30g Starter</li>
+<li>30g Whole Wheat flour</li>
+<li>30g White Flour</li>
+<li>60g Water</li>
+</ul>
+<h3 id="bread"><a class="header" href="#bread">Bread</a></h3>
+<ul>
+<li>406g Bread Flour</li>
+<li>32g Whole Wheat Flour</li>
+<li>352g Water (Add another 25 g if needed)</li>
+<li>10g Salt</li>
+<li>75g Levain</li>
+</ul>
+<h3 id="directions"><a class="header" href="#directions">Directions</a></h3>
+<ol>
+<li>
+<p>Levain – 9:00 a.m.
+Build the liquid levain in the morning and store somewhere warm around 77-80ºF ambient for 5-6 hours. Alternatively, you can build your levain in the evening the night before and leave out at cooler, room temperatures (around 72ºF) and it should be ready in 10-12 hours.</p>
+</li>
+<li>
+<p>Autolyse – 12:30 p.m.
+Mix flour and water (reserve 50g water for the mix, later) very well in a bowl and cover. Ensure all dry flour is hydrated. Store near levain (we want the temperature of the dough to remain warm).</p>
+</li>
+<li>
+<p>Mix, Step 1 – 2:00 p.m.
+Note that I split the mixing phase into two steps.
+For the first step scoop out the required amount of levain on top of your autolysed dough and using about 15g of the reserved water hand-mix the levain into the dough, so it’s incorporated very well. Wait 30 minutes before adding the salt in Step 2.</p>
+</li>
+<li>
+<p>Mix, Step 2 – 2:30 p.m.
+30 minutes later spread the salt on top of the dough and use the remaining water to help dissolve. If your dough is already extremely wet, and you’re getting worried, you don’t have to use all the remaining water. Just spread it out and mix well with your hand, the dough is wet enough already to work the salt thoroughly.</p>
+</li>
+</ol>
+<p>This dough does not require intensive mechanical mixing, we want to under-develop at mix time and build strength during bulk through fermentation and several sets of stretch and folds. After the salt is incorporated, perform folds for about 2-3 minutes in the bowl. Grab under one side, pull up and over to the other side, then rotate the bowl a bit and repeat. I do this probably 30 times or so (it goes fast and easy).</p>
+<p>In the end, the dough should still be shaggy, but it will be a little more smooth and will slightly start to hold itself together more in the bowl.
+If you’re a fan of the slap &amp; fold mixing technique I’ve described in the past, you can do this but be aware that at this hydration it is difficult. If you’re up to the challenge (I do it occasionally) dump the dough out and slap/fold for 3-6 until the dough starts to hold its shape on the counter. You won’t get a super smooth dough, even with slap/fold.</p>
+<p>I find that the correct strength level of the dough at this point is important. You want the dough to be a little smoother after mixing, but not well developed. I know those are general terms, but try to remain observant of how the dough looks when you finish mixing and how it looks when you finish with bulk fermentation. If you find that by the end of bulk you can’t get the dough smooth &amp; strong enough, next time mix a little bit longer to develop the dough a bit more before you start the bulk. Alternatively, you could add another set of stretch/fold’s in bulk.</p>
+<p>Transfer dough to a tub or thick-walled bowl for bulk fermentation.</p>
+<ol start="5">
+<li>Bulk Fermentation – 2:45 p.m.
+At 78-82ºF ambient temperature bulk fermentation should go for about 4 hours. Perform six sets of stretch and folds during the bulk. The first three are at 15-minute intervals, and the last three are at 30-minute intervals. After these folds (2 hours and 15 minutes have gone by) let the dough rest for the remainder of your bulk fermentation (1 hour and 45 minutes).</li>
+</ol>
+<p>I stretch and fold more vigorously at the beginning of bulk than usual since the dough is extraordinarily slack and extensible (due to the high hydration of this recipe). Pick up one side of the dough with both hands and pull it up, just before tearing, and fold it over to the other side. Rotate your container and repeat 4 or 5 times. That is one set.</p>
+<p>Below you can see my dough halfway through bulk, after about 2 hours. No significant rise as of yet, but the edges are beginning to dome, and the texture of the dough is smoothing out slightly. We still have several more folds to do and more strength to build.</p>
+<p>It is essential that the dough is kept near 80ºF as much as possible (minor fluctuations up and down are ok). If temperatures dip down too far you might have to extend the duration of bulk fermentation to compensate, and vice versa. Use your judgment, the signs described below, and be flexible.</p>
+<p>At the end of bulk, your dough should look very gassy, some bubbles here and there and the edges where the dough meets the bowl should be slightly domed. You can see all these signs in the image below. When you gently shake the bowl, the entire mass jiggles from side to side — very alive. You’ll also notice that compared with the photo at the beginning of bulk, the dough is smoother and holds its edges, folds, and creases more readily (most of the bumps and ridges you see are due to trapped gasses from fermentation).</p>
+<ol start="6">
+<li>
+<p>Divide &amp; Preshape – 6:45 p.m.
+Divide the dough into two masses; each scaled at 900 grams (essentially the dough mass in half). Lightly shape each mass into a round and let rest for 30 minutes uncovered. Act quickly when dealing with this dough and rely heavily on your bench knife. I try to use my hands as little as possible when dealing with the dough at this point.</p>
+</li>
+<li>
+<p>Shape – 7:15 p.m.
+Lightly flour the top of your dough rounds and flour the work surface. With this recipe use a little more flour on the surface than normal, the dough will be extremely sticky and wet. Flip each round and shape into a batard (see notes below) or boule, whatever your preference.</p>
+</li>
+</ol>
+<p>I prefer to shape these as batards, and my shaping method is as follows:</p>
+<ol>
+<li>Flip pre-shaped round</li>
+<li>Fold the bottom up to about halfway</li>
+<li>Fold the left side over to about 3/4 to the right</li>
+<li>Fold the right side over to cover left</li>
+<li>Stretch top up &amp; away from the center and fold down to about half (you’ll now have a “letter”)</li>
+<li>Grab a little of the dough at the sides near the top and stretch it over the center, so the dough crosses. Imagine lacing up a shoe where you first grab your laces and cross them over</li>
+<li>Repeat three times from top to bottom (the result will look like a laced up shoe)</li>
+<li>Take the bottom and gently roll the dough up to the top and try to seal it slightly when done rolling</li>
+</ol>
+<p>Alternatively, if the dough feels pretty strong, you could shape it by “cinching” up the dough. For more instruction on how to shape this dough as an oblong loaf, see my post on how to shape a batard (with video!).</p>
+<p>After shaping, let rest on the bench for a few minutes and then place it into a banneton that I lightly dusted with white rice flour. You’ll see above my bannetons give the dough plenty of room to relax and expand in the fridge overnight. While this dough doesn’t rise quite as much as when I use Central Milling’s T70 flour, you still want the loaf to have plenty of room. If your proofing container is on the small side, and you find your dough almost spilling over the edges, it might be time for a larger basket.</p>
+<ol start="8">
+<li>
+<p>Rest &amp; Proof – 7:25 p.m.
+Cover your banneton with plastic and let the dough rest on the counter for 20 minutes. Then, retard in the refrigerator at 38ºF for 15-16 hours.</p>
+</li>
+<li>
+<p>Bake – Next Morning: Preheat oven at 9:00 a.m., Bake at 10:30 a.m.
+Preheat oven for 1.5 hours at 500ºF. Remove the dough from the fridge (there’s no need to let the dough come to room temperature) and uncover. Bake for 20 minutes at 500ºF with steam, and an additional 25-35 minutes at 450ºF, until done to your liking. I like to bake rather dark, so I sometimes extend this second half of baking until I get the crust I’m looking for.</p>
+</li>
+</ol>
+<h2 id="tartine-bread"><a class="header" href="#tartine-bread">Tartine Bread</a></h2>
+<blockquote>
+<p>https://www.youtube.com/watch?v=hNzJLP61nnQ</p>
+</blockquote>
+<h3 id="12-hour-levain"><a class="header" href="#12-hour-levain">12 Hour Levain</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Weight</th><th>Ingredient</th></tr></thead><tbody>
+<tr><td>50 g</td><td>Starter</td></tr>
+<tr><td>40 g</td><td>Whole Wheat Flour</td></tr>
+<tr><td>40 g</td><td>White Flour</td></tr>
+<tr><td>80 g</td><td>Water (85 degrees)</td></tr>
+</tbody></table>
+</div>
+<h3 id="dough"><a class="header" href="#dough">Dough</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Weight</th><th>Ingredient</th></tr></thead><tbody>
+<tr><td>900 g</td><td>Unbleached Bread Flour</td></tr>
+<tr><td>100 g</td><td>Whole Wheat Flour</td></tr>
+<tr><td>750 g</td><td>Water (85 Degrees)</td></tr>
+<tr><td>20 g</td><td>Kosher Salt</td></tr>
+<tr><td>All</td><td>Levain</td></tr>
+</tbody></table>
+</div>
+<ol>
+<li>Make the Levain 12 hours before you want to start mixing dough.</li>
+<li>Combine 700 g of water, levain and flour and mix until shaggy dough.  Let autolyse for 20 - 40 minutes.</li>
+<li>Stir salt into 50 g of water and mix into dough.</li>
+<li>2 Hour Bulk Rise - fold every 25 minutes:</li>
+<li>First 3 folds: 8 folds.</li>
+<li>Folds 4 &amp; 5: Coil folds.</li>
+<li>Let rest 10 minutes after last fold.</li>
+<li>Divide and preshape - dust and cover with plastic and bench rest for 20-30 minutes.</li>
+<li>Shape, wrap and refrigerate from 3 - 12 hours.</li>
+<li>Preheat dutch oven at 500 degrees - 20 minutes covered, lower heat to 450 and cook until browned - 20 - 30 minutes.</li>
+</ol>
+<h2 id="single-loaf"><a class="header" href="#single-loaf">Single Loaf</a></h2>
+<h3 id="12-hour-levain-1"><a class="header" href="#12-hour-levain-1">12 Hour Levain</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Weight</th><th>Ingredient</th></tr></thead><tbody>
+<tr><td>20 g</td><td>Starter</td></tr>
+<tr><td>16 g</td><td>Whole Wheat Flour</td></tr>
+<tr><td>16 g</td><td>White Flour</td></tr>
+<tr><td>32 g</td><td>Water (85 degrees)</td></tr>
+</tbody></table>
+</div>
+<h3 id="dough-1"><a class="header" href="#dough-1">Dough</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Weight</th><th>Ingredient</th></tr></thead><tbody>
+<tr><td>360 g</td><td>Unbleached Bread Flour</td></tr>
+<tr><td>40 g</td><td>Whole Wheat Flour</td></tr>
+<tr><td>300 g</td><td>Total Water (85 Degrees)</td></tr>
+<tr><td>280 g</td><td>Water (Autolyse)</td></tr>
+<tr><td>8 g</td><td>Kosher Salt</td></tr>
+<tr><td>84 g</td><td>Levain</td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../bread/parker_house_rolls.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../bread/sandwich_bread.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../bread/parker_house_rolls.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../bread/sandwich_bread.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
