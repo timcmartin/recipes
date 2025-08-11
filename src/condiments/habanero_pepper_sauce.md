@@ -1,4 +1,5 @@
 # Habanero Pepper Sauce
+<<<<<<< HEAD
 
 > Rafael Vasquez - Cooking Class, Puerto Plata
 
@@ -27,3 +28,5 @@
 
 If you want the sauce mild, remove 12 of the peppers and clean 1/2 of
 all the seeds out of the peppers
+=======
+>>>>>>> a71fc64 (Building book.)
