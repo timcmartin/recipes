@@ -4,7 +4,6 @@ authors = ["Tim Martin"]
 description = "Choice recipes."
 src = "src"
 language = "en"
-multilingual = false
 
 [output.html.fold]
 enable = true
