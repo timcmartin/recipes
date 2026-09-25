@@ -83,6 +83,7 @@
   - [Butter Tart Pie](desserts/buttertart_pie.md)
   - [Caramel Apple Crisp](desserts/caramel_apple_crisp.md)
   - [Cheesecake in a Jar](desserts/cheesecake.md)
+  - [Chocolate Chip Cookies](desserts/chocolate_chip_cookies.md)
   - [Chocolate Pudding](desserts/chocolate_pudding.md)
   - [Chocolate Zucchini Bread](desserts/chocolate_zucchini.md)
   - [Deep Dish Apple Pie](desserts/deep_dish_apple_pie.md)

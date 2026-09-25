@@ -8,6 +8,7 @@
 - [Butter Tart Pie](buttertart_pie.md)
 - [Caramel Apple Crisp](caramel_apple_crisp.md)
 - [Cheesecake in a Jar](cheesecake.md)
+- [Chocolate Chip Cookies](chocolate_chip_cookies.md)
 - [Chocolate Pudding](chocolate_pudding.md)
 - [Chocolate Zucchini Bread](chocolate_zucchini.md)
 - [Deep Dish Apple Pie](deep_dish_apple_pie.md)
